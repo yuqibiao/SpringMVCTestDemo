@@ -1,0 +1,123 @@
+/*
+登录界面css样式
+*/
+@import url(reset.css);
+body {
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 0;
+    color: #666;
+    font-family: "Microsoft yahei", "Arial Narrow";
+}
+
+ul p input {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.header {
+    width: 960px;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.header .title_logo{
+    float: left;
+}
+
+.header p{
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin-right: 25px;
+    float: right;
+    color: #1380d9;
+}
+
+.wrapper_bg {
+    background-color: #f2f2f2;
+    padding: 50px;
+}
+
+.main {
+    width: 960px;
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.loginL {
+    width: 45%;
+    height: 100%;
+    float: left;
+}
+
+.loginR {
+    float: left;
+    width: 45%;
+    height: 100%;
+    padding-left: 10%;
+}
+
+.loginR .tip {
+    font-size: 30px;
+    color: #858788;
+    height: 40px;
+    line-height: 40px;
+    padding: 20px 0 20px;
+}
+
+.loginR label {
+    width: 50%;
+}
+
+.loginR input {
+    width: 292px;
+    height: 38px;
+    line-height: 38px;
+    background: #fefefe;
+    border: 1px solid #dcd8d8;
+    margin-bottom: 25px;
+    font-family: 'Microsoft yahei';
+    font-size: 14px;
+    color: #939495;
+    padding-left: 10px;
+}
+
+input::-webkit-input-placeholder{
+    color: #999;
+}
+input:hover{
+    border: solid 1px #2697f5 ;
+}
+
+.loginR .button {
+    width: 304px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    background: #2697f5;
+}
+
+.loginR .button:hover {
+    background-color: #1380d9;
+}
+
+.footer p {
+    width: 960px;
+    line-height: 80px;
+    height: 80px;
+    text-align: center;
+    font-size: 12px;
+    margin: 0 auto;
+
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <display-name></display-name>
+    <welcome-file-list>
+        <welcome-file>view/login.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!--配置SpringMVC前端控制器-->
+    <servlet>
+        <servlet-name>dispatcherServlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <!--指定配置文件路径-->
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath*:config/spring/spring-mvc.xml</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>dispatcherServlet</servlet-name>
+        <!--
+        1. /* 拦截所有jsp js png .css等 真的全部拦截 不建议使用。
+        2. *.action、*.do 拦截以action、do结尾得请求  （ERP中用的比较多）。
+        3. / 拦截所有（不包含jsp）(包含.js .png .css等) 建议使用（前台面向消费者得应用）。
+        3和1得区别主要是在重定向时 3不拦截jsp页面1拦截，显然不满足平时开发得逻辑。
+        -->
+        <url-pattern>*.action</url-pattern>
+    </servlet-mapping>
+
+</web-app>

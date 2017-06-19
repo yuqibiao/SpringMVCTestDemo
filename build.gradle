@@ -1,0 +1,41 @@
+group 'SpringMVCTestDemo'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+   /* mavenCentral()*/
+    maven{ url"http://maven.aliyun.com/nexus/content/groups/public"}
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    /*---------------------Spring相关依赖-------------------------*/
+    //Spring核心包
+    compile 'org.springframework:spring-core:4.2.4.RELEASE'
+    //Spring的面向切面编程,提供AOP(面向切面编程)实现
+    compile 'org.springframework:spring-aop:4.2.4.RELEASE'
+    //Spring IOC得基础实现
+    compile 'org.springframework:spring-beans:4.2.4.RELEASE'
+    //Spring在基础IOC上提供得扩展服务（如邮件服务、任务调度、
+    // JNDI定位、EJB集成、缓存以及各种视图层框架得封装）
+    compile 'org.springframework:spring-context:4.2.4.RELEASE'
+    compile 'org.springframework:spring-context-support:4.2.4.RELEASE'
+    //SpringMVC相关
+    compile 'org.springframework:spring-web:4.2.4.RELEASE'
+    compile 'org.springframework:spring-webmvc:4.2.4.RELEASE'
+    //事务处理
+    compile 'org.springframework:spring-tx:4.2.4.RELEASE'
+    //JDBC连接
+    compile 'org.springframework:spring-jdbc:4.2.4.RELEASE'
+    //Spring单元测试依赖包
+    compile 'org.springframework:spring-test:4.2.4.RELEASE'
+    /*---------------------Spring相关依赖-------------------------*/
+    //MySql驱动
+    compile 'mysql:mysql-connector-java:5.1.38'
+
+
+}
