@@ -10,4 +10,18 @@
     <!--配置开启扫描-->
     <context:component-scan base-package="com.yyyu.spring_mvc.controller"/>
 
+    <!--转换器配置-->
+    <mvc:annotation-driven conversion-service="conversionService"/>
+    <bean id="conversionService"
+          class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <bean class="com.yyyu.spring_mvc.converter.DateConverter"/>
+            </set>
+        </property>
+    </bean>
+
+    <!--配置自定义异常处理器-->
+    <bean class="com.yyyu.spring_mvc.exception.CustomExceptionHandler"/>
+
 </beans>
