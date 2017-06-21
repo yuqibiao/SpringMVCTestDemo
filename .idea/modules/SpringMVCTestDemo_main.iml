@@ -37,5 +37,6 @@
     <orderEntry type="library" name="Gradle: org.springframework:spring-expression:4.2.4.RELEASE" level="project" />
     <orderEntry type="library" name="servlet-api" level="project" />
     <orderEntry type="library" name="jackson-annotations-2.4.0" level="project" />
+    <orderEntry type="library" name="commons-fileupload-1.2.2" level="project" />
   </component>
 </module>
