@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-    <display-name></display-name>
+
     <welcome-file-list>
         <welcome-file>view/login.jsp</welcome-file>
     </welcome-file-list>
@@ -27,7 +27,11 @@
         3. / 拦截所有（不包含jsp）(包含.js .png .css等) 建议使用（前台面向消费者得应用）。
         3和1得区别主要是在重定向时 3不拦截jsp页面1拦截，显然不满足平时开发得逻辑。
         -->
-        <url-pattern>/</url-pattern>
+        <url-pattern>*.action</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>dispatcherServlet</servlet-name>
+        <url-pattern>/api/*</url-pattern>
     </servlet-mapping>
 
     <!-- 解决post乱码问题 -->

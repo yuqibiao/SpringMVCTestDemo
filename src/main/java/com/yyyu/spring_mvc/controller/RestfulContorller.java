@@ -13,13 +13,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Restful只是一中编程风格，唯一多得是@PathVariable注解
  *
  * 注意：
- * web.xml中得拦截配置要改成/（之前是*.action一直报404）
+ * web.xml中得拦截配置对应的拦截
+
+ *坑：
+ * 关于url-pattern配置（访问时要加上/api）
+ * http://blog.csdn.net/lxb_champagne/article/details/13625793
  *
  * @author yu
  * @date 2017/6/21.
  */
 @Controller
-@RequestMapping("/restful")
+/*@RequestMapping("/api")*/
 public class RestfulContorller {
 
     @RequestMapping(value = {"/userInfo/{userId}"} , method = RequestMethod.GET)
