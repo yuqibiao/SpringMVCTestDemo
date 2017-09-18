@@ -14,7 +14,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
  *
  * 注意：
  * web.xml中得拦截配置对应的拦截
-
+ *
+ * @RequestParam ：请求头中的参数（Post请求可使用这种方法传参）
+ * @PathVariable ：url中的参数
+ *
  *坑：
  * 关于url-pattern配置（访问时要加上/api）
  * http://blog.csdn.net/lxb_champagne/article/details/13625793
@@ -24,7 +27,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 /*@RequestMapping("/api")*/
-public class RestfulContorller {
+public class RestfulController {
 
     @RequestMapping(value = {"/userInfo/{userId}"} , method = RequestMethod.GET)
     public @ResponseBody User getUserInfo(@PathVariable() Integer userId){
