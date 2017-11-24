@@ -21,6 +21,8 @@ import java.util.UUID;
  *
  * 三种方式：
  * http://www.cnblogs.com/fjsnail/p/3491033.html
+ * 上传进度：
+ * http://blog.csdn.net/frankcheng5143/article/details/51832428
  *
  * tomcat配置虚拟路径：
  * http://longx.blog.51cto.com/3327997/1357666

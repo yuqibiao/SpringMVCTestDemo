@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @date 2017/6/21.
  */
 @Controller
-/*@RequestMapping("/api")*/
+@RequestMapping("/api")
 public class RestfulController {
 
     @RequestMapping(value = {"/userInfo/{userId}"} , method = RequestMethod.GET)

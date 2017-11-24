@@ -32,8 +32,10 @@
         <!--<property name="suffix" value=".jsp" />-->
     </bean>
 
+    <bean id="fileUploadProgressListener" class="com.yyyu.spring_mvc.upload.FileUploadProgressListener"/>
+
     <!-- 文件上传,id必须设置为multipartResolver -->
-    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    <bean id="multipartResolver" class="com.yyyu.spring_mvc.upload.CustomMultipartResolver">
         <property name="maxUploadSize" value="104857600" />
         <property name="maxInMemorySize" value="4096" />
         <property name="defaultEncoding" value="UTF-8"/>
