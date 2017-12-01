@@ -37,5 +37,13 @@ dependencies {
     //MySql驱动
     compile 'mysql:mysql-connector-java:5.1.38'
 
+    compile group: 'commons-fileupload', name: 'commons-fileupload', version: '1.2.2'
+    compile group: 'commons-io', name: 'commons-io', version: '2.4'
+
+    //图片处理
+    /*http://www.cnblogs.com/huhx/p/thumbnailator.html*/
+    compile group: 'net.coobird', name: 'thumbnailator', version: '0.4.8'
+
+
 
 }
